@@ -112,15 +112,10 @@ Validation setting:
 
 ---
 
-![](image/compare.png)
-**Figure 2.** Validation perplexity comparison on WikiText-2 for four settings:
-baseline pretrained, NeuroHybrid pretrained, baseline short finetune, and NeuroHybrid short finetune.
-
----
-
-![](image/memory.png)
-**Figure 3.** Peak training memory vs. validation perplexity after short finetuning.  
-NeuroHybrid reduces peak memory substantially (**2.42 GB vs. 5.79 GB**) at the cost of worse PPL.
+<p align="center">
+  <img src="image/compare.png" alt="Validation perplexity comparison on WikiText-2" width="49%" />
+  <img src="image/memory.png" alt="Peak training memory vs. validation perplexity after short finetuning. NeuroHybrid reduces peak memory substantially (**2.42 GB vs. 5.79 GB**) at the cost of worse PPL." width="49%" />
+</p>
 
 ---
 
@@ -144,9 +139,6 @@ To verify that each module works correctly and can participate in training, we c
 
 > These are **sanity-check ablations** to verify that the modules are trainable and numerically stable,  
 > rather than final benchmark comparisons.
-
----
-
 
 ---
 
@@ -178,6 +170,3 @@ The simplified retrieval task succeeded at all tested context lengths:
 
 ---
 
-![](image/results.png)
-**Figure 4.** Simplified needle-in-a-haystack retrieval results.  
-After short finetuning, the model successfully retrieved the target string (`73915`) under all tested context lengths.
