@@ -75,12 +75,7 @@ In the current implementation, a `fusion_scale` is used for numerical stability.
 
 ---
 
-## Figure 1. Method Overview
-
-<p align="center">
-  <img src="figures/fig1_method_overview.png" width="900"/>
-</p>
-
+![](image/framework.png)
 **Figure 1.** Overview of the proposed NeuroHybrid attention block.  
 Input hidden states are projected into Q/K/V, then routed into a **local sliding-window branch** and a **linear memory branch**.  
 An **event gate** controls sparse memory writes, and a **dendritic fusion module** integrates the two branches before the output projection.
@@ -117,23 +112,13 @@ Validation setting:
 
 ---
 
-## Figure 2. WikiText-2 PPL Comparison
-
-<p align="center">
-  <img src="figures/fig2_wikitext2_ppl.png" width="850"/>
-</p>
-
+![](image/compare.png)
 **Figure 2.** Validation perplexity comparison on WikiText-2 for four settings:
 baseline pretrained, NeuroHybrid pretrained, baseline short finetune, and NeuroHybrid short finetune.
 
 ---
 
-## Figure 3. Memory–Performance Trade-off
-
-<p align="center">
-  <img src="figures/fig3_memory_vs_ppl.png" width="750"/>
-</p>
-
+![](image/memory.png)
 **Figure 3.** Peak training memory vs. validation perplexity after short finetuning.  
 NeuroHybrid reduces peak memory substantially (**2.42 GB vs. 5.79 GB**) at the cost of worse PPL.
 
@@ -162,13 +147,8 @@ To verify that each module works correctly and can participate in training, we c
 
 ---
 
-## Figure 4. Functional Ablation Summary
-
-<p align="center">
-  <img src="figures/fig4_day4_ablation.png" width="900"/>
-</p>
-
-**Figure 4.** Day-4 functional ablation summary for the four module combinations.  
+![](image/ablation.png)
+**Figure 4.** Functional ablation summary for the four module combinations.  
 This figure illustrates that the hybrid module, event gate, dendritic fusion, and their combination all preserve a valid training path.
 
 ---
@@ -195,17 +175,12 @@ Decode profile (64 generated tokens):
 
 The simplified retrieval task succeeded at all tested context lengths:
 
-- **512** ✅
-- **1024** ✅
-- **2048** ✅
+- **512** 
+- **1024** 
+- **2048** 
 
 ---
 
-## Figure 5. Needle Retrieval Results
-
-<p align="center">
-  <img src="figures/fig5_needle_results.png" width="700"/>
-</p>
-
+![](image/results.png)
 **Figure 5.** Simplified needle-in-a-haystack retrieval results.  
 After short finetuning, the model successfully retrieved the target string (`73915`) under all tested context lengths.
