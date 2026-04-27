@@ -12,29 +12,22 @@ The project is built on **Qwen2.5-0.5B** and proposes a hybrid efficient attenti
 - **Event Gate** for sparse, event-driven memory writing
 - **Dendritic Fusion** for nonlinear integration of local and global branches
 
-This repository focuses on:
-
-1. **Functional implementation** of a brain-inspired hybrid attention module  
-2. **Trainability verification** on real language modeling data (**WikiText-2**)  
-3. **Efficiency-oriented analysis**, including memory usage, sparse write ratio, and short-context/long-context sanity checks  
-
-> **Important:** This is currently an **efficiency-oriented research prototype**, not a claim of outperforming the original backbone on language modeling quality.
 
 ---
 
 ## Highlights
 
-- ✅ Implemented a **hybrid efficient attention** module on top of **Qwen2.5-0.5B**
-- ✅ Supports **event-driven memory writing** with ~**0.30 write ratio** (~70% writes skipped)
-- ✅ Supports **dendritic bilinear fusion** for nonlinear branch integration
-- ✅ Verified the complete path:  
+-  Implemented a **hybrid efficient attention** module on top of **Qwen2.5-0.5B**
+-  Supports **event-driven memory writing** with ~**0.30 write ratio** (~70% writes skipped)
+-  Supports **dendritic bilinear fusion** for nonlinear branch integration
+-  Verified the complete path:  
   **pretrained eval → short finetune → evaluation**
-- ✅ Evaluated on a **real language modeling dataset (WikiText-2)**
-- ✅ Achieved substantial memory reduction during short finetuning:
+-  Evaluated on a **real language modeling dataset (WikiText-2)**
+-  Achieved substantial memory reduction during short finetuning:
   - **Baseline finetune peak memory:** 5.79 GB
   - **NeuroHybrid finetune peak memory:** 2.42 GB
-- ✅ Only **7.35M trainable parameters** in the NeuroHybrid short finetuning setup
-- ✅ Passed simplified **needle-in-a-haystack** retrieval at **512 / 1024 / 2048** context lengths
+-  Only **7.35M trainable parameters** in the NeuroHybrid short finetuning setup
+-  Passed simplified **needle-in-a-haystack** retrieval at **512 / 1024 / 2048** context lengths
 
 ---
 
