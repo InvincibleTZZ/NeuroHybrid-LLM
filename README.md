@@ -124,7 +124,7 @@ NeuroHybrid reduces peak memory substantially (**2.42 GB vs. 5.79 GB**) at the c
 
 ---
 
-## Day-4 Functional Ablation
+## Functional Ablation
 
 To verify that each module works correctly and can participate in training, we conducted a small functional ablation with four variants:
 
@@ -133,7 +133,7 @@ To verify that each module works correctly and can participate in training, we c
 - `hybrid_fusion`
 - `hybrid_gate_fusion`
 
-### Table 2. Day-4 Functional Ablation (Sanity Check)
+### Table 2. Functional Ablation
 
 | Variant | 1 layer / 128 loss | 4 layers / 512 loss | Write Ratio | Dendritic k | Peak Reserved Memory |
 |---|---:|---:|---:|---:|---:|
@@ -147,9 +147,6 @@ To verify that each module works correctly and can participate in training, we c
 
 ---
 
-![](image/ablation.png)
-**Figure 4.** Functional ablation summary for the four module combinations.  
-This figure illustrates that the hybrid module, event gate, dendritic fusion, and their combination all preserve a valid training path.
 
 ---
 
@@ -182,5 +179,5 @@ The simplified retrieval task succeeded at all tested context lengths:
 ---
 
 ![](image/results.png)
-**Figure 5.** Simplified needle-in-a-haystack retrieval results.  
+**Figure 4.** Simplified needle-in-a-haystack retrieval results.  
 After short finetuning, the model successfully retrieved the target string (`73915`) under all tested context lengths.
